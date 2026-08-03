@@ -1,0 +1,36 @@
+package Activity;
+
+import java.util.Scanner;
+
+class OddNumbers {
+    int n;
+
+    OddNumbers(int n) {
+        this.n = n;
+    }
+
+    void display() {
+        System.out.println("Odd Numbers:");
+
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 0)
+                continue;
+
+            System.out.print(i + " ");
+        }
+    }
+}
+
+public class OddNumbersDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter n: ");
+        int n = sc.nextInt();
+
+        OddNumbers obj = new OddNumbers(n);
+        obj.display();
+
+        sc.close();
+    }
+}
